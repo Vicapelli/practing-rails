@@ -1,5 +1,9 @@
 class PizzariaController < ApplicationController
 
+  def index
+    @pizzas = Pizzarium.all
+  end
+
   private
 
   def set_pizza
@@ -7,6 +11,6 @@ class PizzariaController < ApplicationController
   end
 
   def pizza_params
-    params_require(:pizzarium).permit(:name, :price, :descripton, :photo)
+    params_require(:pizzarium).permit(:name, :price, :descripton, :image)
   end
 end

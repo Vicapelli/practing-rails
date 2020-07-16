@@ -1,0 +1,5 @@
+<% @pizzas.each do |pizza| %>
+  <%= pizza.name %>
+  <%= pizza.description %>
+  <%= cl_image_tag pizza.image.key, height: 300, width: 400, crop: :fill %>
+<% end %>
